@@ -3,7 +3,7 @@
 split_site.py - turn SingleFile (.htm) page saves into a local multi-page site.
 
 Usage:
-    python split_site.py page1.htm page2.htm ... --out bohurup-site
+    python split_site.py page1.htm page2.htm ... --out Yeaxmi-site
 
 For every saved page it
   * pulls the CSS out into css/, fonts into assets/fonts/, images into assets/images/
@@ -18,7 +18,7 @@ For every saved page it
 import argparse, base64, hashlib, html, os, re, shutil, sys
 from urllib.parse import urlparse
 
-SITE = "https://bohurup.com"
+SITE = "https://Yeaxmi.com"
 EXT = {"image/jpeg": "jpg", "image/png": "png", "image/svg+xml": "svg",
        "image/webp": "webp", "image/gif": "gif", "font/woff2": "woff2", "font/woff": "woff"}
 DATA = re.compile(r'data:([a-z0-9/+.\-]+);base64,([A-Za-z0-9+/=]+)')
@@ -110,7 +110,7 @@ class Builder:
         def sub(m):
             q, url = m.group(1), m.group(2)
             u = urlparse(url)
-            if u.netloc and u.netloc not in ("bohurup.com", "www.bohurup.com"): return m.group(0)
+            if u.netloc and u.netloc not in ("Yeaxmi.com", "www.Yeaxmi.com"): return m.group(0)
             if u.scheme in ("mailto", "tel", "javascript") or url.startswith("#"): return m.group(0)
             if "canonical" in s[max(0, m.start()-30):m.start()]: return m.group(0)
             if not u.netloc and not url.startswith("/"): return m.group(0)
@@ -119,7 +119,7 @@ class Builder:
             self.linked.add(t)
             r = rel(current, t) + (("?" + u.query) if u.query else "")
             return f'href={q}{r}{q}'
-        return re.sub(r'href=(["\']?)((?:https://(?:www\.)?bohurup\.com)?/[^"\'\s>]*|https://(?:www\.)?bohurup\.com)\1(?=[\s>])', sub, s)
+        return re.sub(r'href=(["\']?)((?:https://(?:www\.)?Yeaxmi\.com)?/[^"\'\s>]*|https://(?:www\.)?Yeaxmi\.com)\1(?=[\s>])', sub, s)
 
     def stubs(self):
         todo = sorted(t for t in self.linked if t not in self.written and not os.path.exists(os.path.join(self.out, t)))
@@ -138,7 +138,7 @@ class Builder:
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("files", nargs="+"); ap.add_argument("--out", default="bohurup-site")
+    ap.add_argument("files", nargs="+"); ap.add_argument("--out", default="Yeaxmi-site")
     a = ap.parse_args()
     b = Builder(a.out)
     for f in a.files: b.process(f)

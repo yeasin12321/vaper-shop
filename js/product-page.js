@@ -1,5 +1,5 @@
 (async function () {
-  const C = window.BOHURUP_CONFIG, q = f => document.querySelector("[data-f=" + f + "]");
+  const C = window.Yeaxmi_CONFIG, q = f => document.querySelector("[data-f=" + f + "]");
   const slug = new URLSearchParams(location.search).get("slug");
   let data;
   try { data = await BH.load(); } catch (e) { console.error(e); }

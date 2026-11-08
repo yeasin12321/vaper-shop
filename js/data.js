@@ -1,6 +1,6 @@
 /* Loads products + plans from Google Sheets (published CSV), falls back to /data/*.csv */
 (function () {
-  const C = window.BOHURUP_CONFIG;
+  const C = window.Yeaxmi_CONFIG;
   const BH = (window.BH = window.BH || {});
 
   function parseCSV(text) {

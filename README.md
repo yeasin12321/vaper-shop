@@ -37,4 +37,4 @@ One product can have many plan rows. The card shows "From" the lowest price and 
 - Cart / Buy Now / login / payment are not functional in this static copy: Buy Now stores the item in the browser and opens `cart.html` (`CHECKOUT_URL` in `js/config.js`).
 
 ## Rebuild from saved pages
-`python split_site.py saved1.htm saved2.htm --out bohurup-site` re-creates the static pages from SingleFile saves.
+`python split_site.py saved1.htm saved2.htm --out Yeaxmi-site` re-creates the static pages from SingleFile saves.
