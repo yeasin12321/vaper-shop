@@ -1,0 +1,10 @@
+/* Your own additions - safe to edit */
+.pager{display:flex;gap:.5rem;justify-content:center;margin:2rem 0 1rem;flex-wrap:wrap}
+.pager button{min-width:2.5rem;height:2.5rem;border-radius:9999px;border:1px solid hsl(var(--border));background:transparent;color:inherit;cursor:pointer}
+.pager button.on{background:hsl(var(--primary));color:hsl(var(--primary-foreground));border-color:transparent}
+.sort-select{appearance:auto;cursor:pointer;height:2.75rem;border-radius:9999px;padding-right:1.5rem}
+.acc-body{padding:.25rem 1rem 1rem;font-size:.875rem;line-height:1.6;opacity:.85}
+.acc-body ul{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
+.acc-body li::before{content:"\2713";color:hsl(var(--primary));margin-right:.5rem;font-weight:700}
+#bh-toast{position:fixed;left:50%;bottom:1.5rem;transform:translate(-50%,1rem);background:hsl(var(--foreground));color:hsl(var(--background));padding:.6rem 1.1rem;border-radius:.75rem;opacity:0;pointer-events:none;transition:.25s;z-index:100}
+#bh-toast.show{opacity:1;transform:translate(-50%,0)}
