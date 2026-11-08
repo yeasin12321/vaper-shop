@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 110" role="img" aria-labelledby="logo-title">
+  <title id="logo-title">Yeaxmi</title>
+  <defs>
+    <linearGradient id="mark-gradient" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <circle cx="55" cy="55" r="48" fill="url(#mark-gradient)"/>
+  <path d="M31 31h13l11 18 11-18h13L61 59v22H49V59z" fill="#fff"/>
+  <circle cx="83" cy="27" r="5" fill="#fbbf24"/>
+  <text x="116" y="76" fill="#fff" stroke="#14233a" stroke-linejoin="round" stroke-width="2.5" paint-order="stroke" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700">Yeaxmi</text>
+</svg>
